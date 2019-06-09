@@ -4,12 +4,15 @@
 #include "../Manager/ShaderMgr.h"
 #include "../Manager/TextureMgr.h"
 
+#include <iostream>
+
 namespace Renderer
 {
 	InstanceDrawable::InstanceDrawable(unsigned int shaderIndex)
 	{
 		m_shaderIndex = shaderIndex;
 		glGenBuffers(1, &m_instanceVBO);
+		std::cout << "m_instanceVBO->" << m_instanceVBO << std::endl;
 	}
 
 	InstanceDrawable::~InstanceDrawable()
@@ -27,6 +30,7 @@ namespace Renderer
 		{
 			unsigned int vao = meshMgr->getMesh(m_meshIndex[x])->getVertexArrayObject();
 			glBindVertexArray(vao);
+			glBindBuffer(GL_ARRAY_BUFFER, m_instanceVBO);
 			// vertex property.
 			GLsizei vec4Size = sizeof(glm::vec4);
 			glEnableVertexAttribArray(4);
@@ -43,15 +47,18 @@ namespace Renderer
 			glVertexAttribDivisor(7, 1);
 		}
 		glBindVertexArray(0);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		m_instance = true;
 		m_instanceNum = instanceMatrice.size();
 	}
 
 	void InstanceDrawable::render(Camera3D::ptr camera, Light::ptr sunLight,
-		Camera3D::ptr lightCamera)
+		Camera3D::ptr lightCamera, Shader::ptr shader)
 	{
+		if (!m_visiable) return;
 		// render the model.
-		Shader::ptr shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
+		if(shader == nullptr)
+			shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
 		shader->bind();
 		if (sunLight)
 			sunLight->setLightUniform(shader, camera);
@@ -70,6 +77,7 @@ namespace Renderer
 			shader->setMat4("lightSpaceMatrix", glm::mat4(1.0f));
 		// object matrix.
 		shader->setBool("instance", true);
+		shader->setBool("receiveShadow", m_receiveShadow);
 		shader->setMat4("modelMatrix", m_transformation.getWorldMatrix());
 		shader->setMat4("viewMatrix", camera->getViewMatrix());
 		shader->setMat4("projectMatrix", camera->getProjectMatrix());

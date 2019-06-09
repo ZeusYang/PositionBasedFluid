@@ -108,6 +108,9 @@
     <ClCompile Include="Simulator\TimeManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer\Voxelization.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImGui\Dialog.h">
@@ -222,6 +225,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Simulator\TimeManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\Voxelization.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

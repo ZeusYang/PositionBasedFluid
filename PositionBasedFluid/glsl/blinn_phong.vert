@@ -24,7 +24,7 @@ void main(){
 	if(!instance)
 		FragPos = vec3(modelMatrix * vec4(position,1.0f));
 	else 
-		FragPos = vec3(instanceMatrix * vec4(position,1.0f));
+		FragPos = vec3(modelMatrix * instanceMatrix * vec4(position,1.0f));
 	FragPosLightSpace = lightSpaceMatrix * vec4(FragPos,1.0f);
 	gl_Position = projectMatrix * viewMatrix * vec4(FragPos,1.0f);
 }

@@ -16,6 +16,8 @@ namespace Renderer
 		float m_mouseSty, m_moveSpeed, m_wheelSty;
 
 	public:
+		typedef std::shared_ptr<TPSCamera> ptr;
+
 		// ctor/dtor.
 		TPSCamera(glm::vec3 target, float yaw, float pitch, float dist);
 		virtual ~TPSCamera() = default;

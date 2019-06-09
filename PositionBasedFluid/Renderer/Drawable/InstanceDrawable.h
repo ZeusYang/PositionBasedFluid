@@ -16,7 +16,7 @@ namespace Renderer
 		void setInstanceMatrix(const std::vector<glm::mat4> &instanceMatrice,
 			GLenum drawWay = GL_STATIC_DRAW);
 
-		virtual void render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera);
+		virtual void render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera, Shader::ptr shader = nullptr);
 		virtual void renderDepth(Shader::ptr shader, Camera3D::ptr lightCamera);
 	};
 

@@ -12,6 +12,7 @@ struct DirLight {
     vec3 specular;
 };
 
+uniform bool receiveShadow;
 uniform vec3 cameraPos;
 uniform DirLight dirLight;
 uniform sampler2D image;
@@ -40,8 +41,15 @@ void main(){
 
 	// shadow
 	//ambient = vec3(0.15);
-	float shadow = 1.0f - shadowCalculation(FragPosLightSpace, 0.0f);
-	fragColor = vec4(ambient + shadow * (diffuse + specular), 1.0f);
+	if(receiveShadow)
+	{
+		float shadow = 1.0f - shadowCalculation(FragPosLightSpace, 0.0f);
+		fragColor = vec4(ambient + shadow * (diffuse + specular), 1.0f);
+	}
+	else
+	{
+		fragColor = vec4(ambient + diffuse + specular, 1.0f);
+	}
 	
 	//fragColor = clamp(fragColor, vec4(0.1), vec4(1));
 	// gamma correction.

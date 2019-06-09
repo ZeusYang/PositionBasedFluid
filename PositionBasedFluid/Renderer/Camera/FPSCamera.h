@@ -15,6 +15,8 @@ namespace Renderer
 		float m_mouseSty, m_moveSpeed;
 
 	public:
+		typedef std::shared_ptr<FPSCamera> ptr;
+
 		FPSCamera(glm::vec3 pos);
 		virtual ~FPSCamera() = default;
 

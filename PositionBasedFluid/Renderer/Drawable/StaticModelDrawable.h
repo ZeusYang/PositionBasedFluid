@@ -10,6 +10,7 @@ namespace Renderer
 	class StaticModelDrawable : public Drawable
 	{
 	private:
+		glm::vec3 m_min, m_max;
 		std::string m_directory;
 
 	public:
@@ -18,7 +19,9 @@ namespace Renderer
 		StaticModelDrawable(unsigned int shaderIndex, const std::string &path);
 		~StaticModelDrawable();
 
-		virtual void render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera);
+		virtual void getAABB(glm::vec3 &min, glm::vec3 &max) { min = m_min; max = m_max; }
+
+		virtual void render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera, Shader::ptr shader = nullptr);
 		virtual void renderDepth(Shader::ptr shader, Camera3D::ptr lightCamera);
 
 	private:

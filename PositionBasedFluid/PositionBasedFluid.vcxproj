@@ -160,6 +160,7 @@
     <ClCompile Include="Renderer\Manager\TextureMgr.cpp" />
     <ClCompile Include="Renderer\RenderDevice.cpp" />
     <ClCompile Include="Renderer\RenderSystem.cpp" />
+    <ClCompile Include="Renderer\Voxelization.cpp" />
     <ClCompile Include="Simulator\FluidModelSolver.cpp" />
     <ClCompile Include="Simulator\NeighborSearch.cpp" />
     <ClCompile Include="Simulator\ParticleGroup.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="Renderer\RenderDevice.h" />
     <ClInclude Include="Renderer\RenderSystem.h" />
     <ClInclude Include="Renderer\StaticModelDrawable.h" />
+    <ClInclude Include="Renderer\Voxelization.h" />
     <ClInclude Include="Simulator\FluidModelSolver.h" />
     <ClInclude Include="Simulator\HashMap.h" />
     <ClInclude Include="Simulator\NeighborSearch.h" />

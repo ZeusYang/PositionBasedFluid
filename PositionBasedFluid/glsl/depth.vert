@@ -9,7 +9,7 @@ uniform mat4 modelMatrix;
 void main()
 {
 	if(!instance)
-    	gl_Position = lightSpaceMatrix * modelMatrix * vec4(position, 1.0f);
+    		gl_Position = lightSpaceMatrix * modelMatrix * vec4(position, 1.0f);
 	else
- 		gl_Position = lightSpaceMatrix * instanceMatrix * vec4(position, 1.0f);
+ 		gl_Position = lightSpaceMatrix * modelMatrix * instanceMatrix * vec4(position, 1.0f);
 }

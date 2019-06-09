@@ -43,7 +43,8 @@ namespace Renderer
 		unsigned int cubeTex = m_textureMgr->loadTextureCube("skybox", path, pFix);
 		unsigned int mesh = m_meshMgr->loadMesh(new Sphere(1.0f, 10, 10));
 		m_skyDome = make_shared<SkyDome>(skyboxShader);
-		m_skyDome->addMesh(mesh, cubeTex);
+		m_skyDome->addMesh(mesh);
+		m_skyDome->addTexture(cubeTex);
 	}
 
 	Camera3D::ptr RenderSystem::createFPSCamera(glm::vec3 pos, glm::vec3 target)

@@ -8,6 +8,7 @@
 #include "Renderer/Drawable/Geometry.h"
 #include "Renderer/Drawable/InstanceDrawable.h"
 #include "Renderer/Drawable/StaticModelDrawable.h"
+#include "Renderer/Voxelization.h"
 
 #include "Simulator/FluidModelSolver.h"
 
@@ -71,7 +72,8 @@ int main(int argc, char *argv[])
 	// meshes.
 	unsigned int planeMesh = meshMgr->loadMesh(new Plane(500.0f, 500.0f));
 	unsigned int cubeMesh = meshMgr->loadMesh(new Cube(1.0f, 1.0f, 1.0f));
-	unsigned int sphereMesh = meshMgr->loadMesh(new Sphere(1.0f, 10, 10));
+	unsigned int sphereMesh1 = meshMgr->loadMesh(new Sphere(1.0f, 10, 10));
+	unsigned int sphereMesh2 = meshMgr->loadMesh(new Sphere(0.5f, 10, 10));
 
 	// sunlight.
 	renderSys->setSunLight(glm::vec3(1.0f, 1.0f, 1.0f),
@@ -79,7 +81,8 @@ int main(int argc, char *argv[])
 
 	// add drawable objects.
 	Drawable *floor = new SimpleObject(blinnPhongShader);
-	floor->addMesh(planeMesh, tex1);
+	floor->addMesh(planeMesh);
+	floor->addTexture(tex1);
 
 	StaticModelDrawable *model = new StaticModelDrawable(blinnPhongShader,
 		"./res/nanosuit/nanosuit.obj");
@@ -87,16 +90,34 @@ int main(int argc, char *argv[])
 	trans->scale(glm::vec3(0.2f));
 	trans->translate(glm::vec3(2.5, 0.0, -2.0));
 
+	StaticModelDrawable *robot = new StaticModelDrawable(simpleColorShader,
+		"./res/bunny.obj");
+	Transform3D *trans1 = robot->getTransformation();
+	trans1->scale(glm::vec3(0.8f));
+	trans1->translate(glm::vec3(-2.5, 1.0, +2.0));
+
 	Drawable *box = new SimpleObject(blinnPhongShader);
-	box->addMesh(cubeMesh, cube1);
+	box->addMesh(cubeMesh);
+	box->addTexture(cube1);
 	box->getTransformation()->translate(glm::vec3(-3.0f, 0.5f, -2.0f));
 
+	InstanceDrawable * voxelVisual = new InstanceDrawable(blinnPhongShader);
+	voxelVisual->addMesh(cubeMesh);
+	voxelVisual->addTexture(blue);
+	voxelVisual->setReceiveShadow(false);
+	Transform3D *voxelTrans = voxelVisual->getTransformation();
+	voxelTrans->translate(glm::vec3(-1.0, 1.0, 2.0));
+
 	renderParticles = new InstanceDrawable(blinnPhongShader);
-	renderParticles->addMesh(sphereMesh, blue);
+	renderParticles->addMesh(sphereMesh1);
+	renderParticles->addTexture(blue);
+	renderParticles->setReceiveShadow(false);
 
 	renderSys->addDrawable(floor);
 	renderSys->addDrawable(model);
 	renderSys->addDrawable(box);
+	renderSys->addDrawable(robot);
+	renderSys->addDrawable(voxelVisual);
 	renderSys->addDrawable(renderParticles);
 
 	//Camera3D::ptr camera = renderSys->createFPSCamera(glm::vec3(0, 0, 2), glm::vec3(0,0,0));
@@ -114,7 +135,7 @@ int main(int argc, char *argv[])
 	// shadow setting.
 	renderSys->createShadowDepthBuffer(2048, 2048);
 	renderSys->createSunLightCamera(glm::vec3(0.0f), -25.0f, +25.0f,
-		-25.0f, +25.0f, 1.0f, 500.0f);
+		-25.0f, +25.0f, 1.0f, 300.0f);
 
 	buildModel();
 	unsigned int nParticles = fluid.getFluidParticleNum();
@@ -126,10 +147,26 @@ int main(int argc, char *argv[])
 	thread simulationThread(runSimulation);
 	simulationThread.detach();
 
+	// voxelization
+	Voxelization voxel;
+	std::vector<glm::vec3> ret;
+	std::vector<glm::mat4> inst;
+	voxel.voxelize(robot, 0.1, ret);
+	for (unsigned int x = 0; x < ret.size(); ++x)
+	{
+		glm::mat4 transf(1.0f);
+		transf = glm::translate(transf, ret[x]);
+		transf = glm::scale(transf, glm::vec3(0.1));
+		inst.push_back(transf);
+	}
+	if(ret.size() > 0)
+		voxelVisual->setInstanceMatrix(inst);
+	robot->setVisiable(false);
 	// renderer loop.
 	while (window->run())
 	{
 		window->beginFrame();
+
 		renderSys->render();
 
 		if (runIt)

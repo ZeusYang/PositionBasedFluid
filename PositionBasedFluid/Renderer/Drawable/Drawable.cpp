@@ -23,20 +23,25 @@ namespace Renderer
 		}
 	}
 
-	void SkyDome::render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera)
+	void SkyDome::render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera, Shader::ptr shader)
 	{
-		Shader::ptr shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
+		if (!m_visiable) return;
+		if(shader == nullptr)
+			shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
 		shader->bind();
 		shader->setInt("image", 0);
+		shader->setBool("receiveShadow", m_receiveShadow);
 		shader->setMat4("viewMatrix", glm::mat4(glm::mat3(camera->getViewMatrix())));
 		shader->setMat4("projectMatrix", camera->getProjectMatrix());
 		this->renderImp();
 		ShaderMgr::getSingleton()->unBindShader();
 	}
 
-	void SimpleObject::render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera)
+	void SimpleObject::render(Camera3D::ptr camera, Light::ptr sunLight, Camera3D::ptr lightCamera, Shader::ptr shader)
 	{
-		Shader::ptr shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
+		if (!m_visiable) return;
+		if(shader == nullptr)
+			shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
 		shader->bind();
 		if (sunLight)
 			sunLight->setLightUniform(shader, camera);
@@ -56,6 +61,7 @@ namespace Renderer
 			shader->setMat4("lightSpaceMatrix", glm::mat4(1.0f));
 		// object matrix.
 		shader->setBool("instance", false);
+		shader->setBool("receiveShadow", m_receiveShadow);
 		shader->setMat4("modelMatrix", m_transformation.getWorldMatrix());
 		shader->setMat4("viewMatrix", camera->getViewMatrix());
 		shader->setMat4("projectMatrix", camera->getProjectMatrix());

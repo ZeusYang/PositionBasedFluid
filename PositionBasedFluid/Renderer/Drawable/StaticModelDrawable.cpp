@@ -22,11 +22,15 @@ namespace Renderer
 	}
 
 	void StaticModelDrawable::render(Camera3D::ptr camera, Light::ptr sunLight,
-		Camera3D::ptr lightCamera)
+		Camera3D::ptr lightCamera, Shader::ptr shader)
 	{
 		// render the model.
-		Shader::ptr shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
-		shader->bind();
+		if (!m_visiable) return;
+		if (shader == nullptr)
+		{
+			shader = ShaderMgr::getSingleton()->getShader(m_shaderIndex);
+			shader->bind();
+		}
 		if(sunLight)
 			sunLight->setLightUniform(shader, camera);
 		shader->setInt("image", 0);
@@ -44,6 +48,7 @@ namespace Renderer
 			shader->setMat4("lightSpaceMatrix", glm::mat4(1.0f));
 		// object matrix.
 		shader->setBool("instance", false);
+		shader->setBool("receiveShadow", m_receiveShadow);
 		shader->setMat4("modelMatrix", m_transformation.getWorldMatrix());
 		shader->setMat4("viewMatrix", camera->getViewMatrix());
 		shader->setMat4("projectMatrix", camera->getProjectMatrix());
@@ -65,6 +70,8 @@ namespace Renderer
 	void StaticModelDrawable::loadModel(const std::string &path)
 	{
 		// load the model file.
+		m_min = glm::vec3(+FLT_MAX);
+		m_max = glm::vec3(-FLT_MAX);
 		Assimp::Importer importer;
 		const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate 
 			| aiProcess_FlipUVs | aiProcess_GenNormals);
@@ -83,9 +90,11 @@ namespace Renderer
 		for (unsigned int i = 0; i < node->mNumMeshes; i++)
 		{
 			aiMesh *mesh = scene->mMeshes[node->mMeshes[i]];
-			unsigned int meshIndex, texIndex;
+			unsigned int meshIndex, texIndex = 1000000;
 			processMesh(mesh, scene, meshIndex, texIndex);
-			this->addMesh(meshIndex, texIndex);
+			this->addMesh(meshIndex);
+			if(texIndex != 1000000)
+				this->addTexture(texIndex);
 		}
 		// process children' nodes.
 		for (unsigned int i = 0; i < node->mNumChildren; i++)
@@ -117,6 +126,25 @@ namespace Renderer
 				vertex.texcoord = glm::vec2(0.0f, 0.0f);
 			vertex.color = vertex.normal;
 			vertices.push_back(vertex);
+			// bounding box.
+			if (mesh->mVertices[x].x < m_min.x)
+				m_min.x = mesh->mVertices[x].x;
+			if (mesh->mVertices[x].y < m_min.y)
+				m_min.y = mesh->mVertices[x].y;
+			if (mesh->mVertices[x].z < m_min.z)
+				m_min.z = mesh->mVertices[x].z;
+			if (mesh->mVertices[x].x > m_max.x)
+				m_max.x = mesh->mVertices[x].x;
+			if (mesh->mVertices[x].y > m_max.y)
+				m_max.y = mesh->mVertices[x].y;
+			if (mesh->mVertices[x].z > m_max.z)
+				m_max.z = mesh->mVertices[x].z;
+			//m_min.x = std::min(m_min.x, mesh->mVertices[x].x);
+			//m_min.y = std::min(m_min.y, mesh->mVertices[x].y);
+			//m_min.z = std::min(m_min.z, mesh->mVertices[x].z);
+			//m_max.x = std::max(m_max.x, mesh->mVertices[x].x);
+			//m_max.y = std::max(m_max.y, mesh->mVertices[x].y);
+			//m_max.z = std::max(m_max.z, mesh->mVertices[x].z);
 		}
 
 		for (unsigned int x = 0; x < mesh->mNumFaces;++ x)

@@ -33,6 +33,7 @@ namespace Renderer
 		unsigned int m_vao, m_vbo, m_ebo;
 		std::vector<Vertex> m_vertices;
 		std::vector<unsigned int> m_indices;
+		glm::vec3 m_minVert, m_maxVert;
 
 	public:
 		typedef std::shared_ptr<Mesh> ptr;
@@ -43,6 +44,16 @@ namespace Renderer
 			const std::vector<unsigned int> &indi);
 
 		virtual ~Mesh();
+
+		void setAABB(const glm::vec3 &min, const glm::vec3 &max)
+		{
+			m_minVert = min; m_maxVert = max;
+		}
+
+		bool getAABB(glm::vec3 &min, glm::vec3 &max)
+		{
+			min = m_minVert; max = m_maxVert;
+		}
 
 		unsigned int getVertexArrayObject() const
 		{
