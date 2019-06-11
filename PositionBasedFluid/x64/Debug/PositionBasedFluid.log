@@ -1,29 +1,30 @@
-﻿  Dialog.cpp
-  imgui.cpp
-  ImGuiOpenGLContext.cpp
-  imgui_demo.cpp
-  imgui_draw.cpp
-  imgui_impl_glfw_gl3.cpp
-  main.cpp
+﻿  main.cpp
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(51): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(63): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\particlegroup.h(69): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\neighborsearch.h(60): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\main.cpp(275): warning C4305: “参数”: 从“const Simulator::real”到“T”截断
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\main.cpp(154): warning C4305: “参数”: 从“double”到“const float”截断
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\main.cpp(159): warning C4305: “参数”: 从“double”到“T”截断
           with
           [
               T=float
           ]
-  Camera3D.cpp
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\main.cpp(312): warning C4305: “参数”: 从“const Simulator::real”到“T”截断
+          with
+          [
+              T=float
+          ]
   FPSCamera.cpp
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\camera\fpscamera.cpp(74): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\camera\fpscamera.cpp(75): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
@@ -40,9 +41,8 @@ c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\rende
           [
               T=float
           ]
-  Transform3D.cpp
   Drawable.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(63): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
@@ -52,27 +52,33 @@ c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\rende
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
   Geometry.cpp
   InstanceDrawable.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(63): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(51): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(35): warning C4312: “类型强制转换”: 从“GLsizei”转换到更大的“void *”
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(37): warning C4312: “类型强制转换”: 从“GLsizei”转换到更大的“void *”
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(39): warning C4312: “类型强制转换”: 从“GLsizei”转换到更大的“void *”
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(47): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(41): warning C4312: “类型强制转换”: 从“GLsizei”转换到更大的“void *”
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(43): warning C4312: “类型强制转换”: 从“GLsizei”转换到更大的“void *”
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\instancedrawable.cpp(52): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
   StaticModelDrawable.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(63): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
@@ -86,43 +92,30 @@ c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\include\assimp\scene.h(7
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\include\assimp\scene.h(278): warning C4099: “aiScene”: 类型名称以前使用“class”现在使用的是“struct”
   c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\include\assimp\scene.h(277): note: 参见“aiScene”的声明
   Light.cpp
-  FrameBuffer.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(51): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
   Mesh.cpp
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\mesh.cpp(23): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\mesh.cpp(26): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
   MeshMgr.cpp
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
   Shader.cpp
-  正在生成代码...
-  正在编译...
   ShaderMgr.cpp
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-  Texture.cpp
-  TextureMgr.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(51): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
   RenderDevice.cpp
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(51): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(63): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\renderdevice.cpp(111): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\renderdevice.cpp(143): warning C4244: “=”: 从“double”转换到“T”，可能丢失数据
           with
@@ -138,78 +131,30 @@ c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\rende
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\meshmgr.h(25): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(41): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(51): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
 c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\texturemgr.h(52): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(63): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-  FluidModelSolver.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\particlegroup.h(69): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\neighborsearch.h(60): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.h(42): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(32): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(33): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(49): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(63): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(81): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(90): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(135): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(154): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(156): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(171): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(185): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(246): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(257): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(268): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(279): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(316): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(328): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(354): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(368): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(407): warning C4244: “=”: 从“Simulator::real”转换到“T”，可能丢失数据
-          with
-          [
-              T=float
-          ]
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(408): warning C4244: “=”: 从“Simulator::real”转换到“T”，可能丢失数据
-          with
-          [
-              T=float
-          ]
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(409): warning C4244: “=”: 从“Simulator::real”转换到“T”，可能丢失数据
-          with
-          [
-              T=float
-          ]
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(450): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(493): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(511): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(512): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(515): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(516): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(517): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(518): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(549): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(550): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(551): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(552): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(584): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(591): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(592): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(593): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(594): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\fluidmodelsolver.cpp(595): warning C4267: “参数”: 从“size_t”转换到“const unsigned int”，可能丢失数据
-  NeighborSearch.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\particlegroup.h(69): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\neighborsearch.h(60): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\neighborsearch.cpp(33): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
-  ParticleGroup.cpp
-c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\simulator\particlegroup.h(69): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
-  PositionBasedFluids.cpp
-  SPHKernels.cpp
-  TimeManager.cpp
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  Voxelization.cpp
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\drawable\drawable.h(74): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(31): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(32): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(42): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\manager\shadermgr.h(43): warning C4267: “return”: 从“size_t”转换到“unsigned int”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(38): warning C4305: “参数”: 从“double”到“float”截断
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(38): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(37): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(46): warning C4305: “参数”: 从“double”到“float”截断
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(46): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(45): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(54): warning C4305: “参数”: 从“double”到“float”截断
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(54): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+c:\users\ywc\desktop\fluidsimulation\positionbasedfluid\positionbasedfluid\renderer\voxelization.cpp(53): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
   正在生成代码...
 ImGuiOpenGLContext.obj : error LNK2019: 无法解析的外部符号 glfwGetWindowSize，该符号在函数 "public: void __cdecl ImGui::ImGuiOpenGLContext::BeginFrame(void)" (?BeginFrame@ImGuiOpenGLContext@ImGui@@QEAAXXZ) 中被引用
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 glfwGetWindowSize
@@ -249,18 +194,22 @@ ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glew
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewBlendEquation
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewBlendFuncSeparate
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewBlendFuncSeparate
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
 InstanceDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
 Mesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBuffer
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
 InstanceDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
 Mesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewBufferData
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteBuffers
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteBuffers
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteBuffers
 InstanceDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteBuffers
 Mesh.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteBuffers
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
 InstanceDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewGenBuffers
@@ -279,6 +228,7 @@ Shader.obj : error LNK2001: 无法解析的外部符号 __imp___glewCreateProgra
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewCreateShader
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewCreateShader
 Shader.obj : error LNK2001: 无法解析的外部符号 __imp___glewCreateShader
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteProgram
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteProgram
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteProgram
 main.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteProgram
@@ -296,6 +246,7 @@ ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glew
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetAttribLocation
 StaticModelDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetUniformLocation
 Light.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetUniformLocation
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetUniformLocation
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetUniformLocation
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetUniformLocation
 Drawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewGetUniformLocation
@@ -312,11 +263,13 @@ imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___gle
 Drawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniform1i
 InstanceDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniform1i
 StaticModelDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniformMatrix4fv
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniformMatrix4fv
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniformMatrix4fv
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniformMatrix4fv
 Drawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniformMatrix4fv
 InstanceDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniformMatrix4fv
 StaticModelDrawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUseProgram
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewUseProgram
 ImGuiOpenGLContext.obj : error LNK2001: 无法解析的外部符号 __imp___glewUseProgram
 imgui_impl_glfw_gl3.obj : error LNK2001: 无法解析的外部符号 __imp___glewUseProgram
 Drawable.obj : error LNK2001: 无法解析的外部符号 __imp___glewUseProgram
@@ -343,6 +296,7 @@ StaticModelDrawable.obj : error LNK2019: 无法解析的外部符号 "public: __
 StaticModelDrawable.obj : error LNK2019: 无法解析的外部符号 "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@PEBDI@Z)，该符号在函数 "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z) 中被引用
 StaticModelDrawable.obj : error LNK2019: 无法解析的外部符号 "public: char const * __cdecl Assimp::Importer::GetErrorString(void)const " (?GetErrorString@Importer@Assimp@@QEBAPEBDXZ)，该符号在函数 "private: void __cdecl Renderer::StaticModelDrawable::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadModel@StaticModelDrawable@Renderer@@AEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中被引用
 Light.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniform3fv
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniform3fv
 FrameBuffer.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindFramebuffer
 FrameBuffer.obj : error LNK2001: 无法解析的外部符号 __imp___glewDeleteFramebuffers
 FrameBuffer.obj : error LNK2001: 无法解析的外部符号 __imp___glewFramebufferTexture2D
@@ -367,6 +321,11 @@ RenderDevice.obj : error LNK2019: 无法解析的外部符号 glfwSetCursorPosCa
 RenderDevice.obj : error LNK2019: 无法解析的外部符号 glfwMakeContextCurrent，该符号在函数 "public: bool __cdecl Renderer::RenderDevice::initialize(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,int,int)" (?initialize@RenderDevice@Renderer@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HH@Z) 中被引用
 RenderDevice.obj : error LNK2019: 无法解析的外部符号 glfwSwapBuffers，该符号在函数 "public: void __cdecl Renderer::RenderDevice::endFrame(void)" (?endFrame@RenderDevice@Renderer@@QEAAXXZ) 中被引用
 RenderDevice.obj : error LNK2001: 无法解析的外部符号 __imp_glewExperimental
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewMapBuffer
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewUnmapBuffer
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewUniform1f
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewMemoryBarrier
+Voxelization.obj : error LNK2001: 无法解析的外部符号 __imp___glewBindBufferBase
 FluidModelSolver.obj : error LNK2019: 无法解析的外部符号 "void __cdecl tbb::assertion_failure(char const *,int,char const *,char const *)" (?assertion_failure@tbb@@YAXPEBDH00@Z)，该符号在函数 "public: __cdecl tbb::blocked_range<unsigned __int64>::blocked_range<unsigned __int64>(class tbb::blocked_range<unsigned __int64> &,class tbb::split)" (??0?$blocked_range@_K@tbb@@QEAA@AEAV01@Vsplit@1@@Z) 中被引用
 NeighborSearch.obj : error LNK2001: 无法解析的外部符号 "void __cdecl tbb::assertion_failure(char const *,int,char const *,char const *)" (?assertion_failure@tbb@@YAXPEBDH00@Z)
 FluidModelSolver.obj : error LNK2019: 无法解析的外部符号 "public: class tbb::task & __cdecl tbb::internal::allocate_root_with_context_proxy::allocate(unsigned __int64)const " (?allocate@allocate_root_with_context_proxy@internal@tbb@@QEBAAEAVtask@3@_K@Z)，该符号在函数 "void * __cdecl operator new(unsigned __int64,class tbb::internal::allocate_root_with_context_proxy const &)" (??2@YAPEAX_KAEBVallocate_root_with_context_proxy@internal@tbb@@@Z) 中被引用
@@ -396,4 +355,4 @@ NeighborSearch.obj : error LNK2001: 无法解析的外部符号 "unsigned __int6
 ..\lib\\assimp.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
 ..\lib\\tbb.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
 ..\lib\\tbb_debug.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
-C:\Users\ywc\Desktop\FluidSimulation\PositionBasedFluid\x64\Debug\PositionBasedFluid.exe : fatal error LNK1120: 84 个无法解析的外部命令
+C:\Users\ywc\Desktop\FluidSimulation\PositionBasedFluid\x64\Debug\PositionBasedFluid.exe : fatal error LNK1120: 89 个无法解析的外部命令

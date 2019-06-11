@@ -93,8 +93,9 @@ int main(int argc, char *argv[])
 	StaticModelDrawable *robot = new StaticModelDrawable(simpleColorShader,
 		"./res/bunny.obj");
 	Transform3D *trans1 = robot->getTransformation();
-	trans1->scale(glm::vec3(0.8f));
-	trans1->translate(glm::vec3(-2.5, 1.0, +2.0));
+	//trans1->scale(glm::vec3(0.8f));
+	//trans1->translate(glm::vec3(-2.5, 1.0, +2.0));
+	trans1->translate(glm::vec3(-1.0, 1.0, 2.0));
 
 	Drawable *box = new SimpleObject(blinnPhongShader);
 	box->addMesh(cubeMesh);
@@ -102,7 +103,7 @@ int main(int argc, char *argv[])
 	box->getTransformation()->translate(glm::vec3(-3.0f, 0.5f, -2.0f));
 
 	InstanceDrawable * voxelVisual = new InstanceDrawable(blinnPhongShader);
-	voxelVisual->addMesh(cubeMesh);
+	voxelVisual->addMesh(sphereMesh2);
 	voxelVisual->addTexture(blue);
 	voxelVisual->setReceiveShadow(false);
 	Transform3D *voxelTrans = voxelVisual->getTransformation();
@@ -124,7 +125,6 @@ int main(int argc, char *argv[])
 	Camera3D::ptr camera = renderSys->createTPSCamera(
 		glm::vec3(0, 0, 0),
 		glm::vec3(containerWidth * (-0.5) + fwidth * particleRadius * 0.5f,
-			/*particleRadius * fheight * 0.5f,*/
 			0.0f,
 			containerHeight * (-0.5) + fdepth * particleRadius * 0.5f));
 	camera->setPerspectiveProject(45.0f, static_cast<float>(width) / height, 0.1f, 100.0f);
@@ -162,16 +162,15 @@ int main(int argc, char *argv[])
 	if(ret.size() > 0)
 		voxelVisual->setInstanceMatrix(inst);
 	robot->setVisiable(false);
+
 	// renderer loop.
 	while (window->run())
 	{
 		window->beginFrame();
-
 		renderSys->render();
 
 		if (runIt)
 		{
-			//fluid.simulate();
 			pushParticlesToRender(renderParticles, fluid.getParticleGroup(),
 				0, nParticles + showWall * nWallParticles);
 		}
@@ -194,7 +193,6 @@ int main(int argc, char *argv[])
 			}
 			if (ImGui::Button("Run"))
 				runIt = !runIt;
-			
 			ImGui::End();
 		}
 
@@ -242,7 +240,6 @@ void createBreakingDamScene()
 	initBoundaryData(boundaryParticles);
 
 	fluid.setupModel(fluidParticles, boundaryParticles);
-	//pushParticlesToRender(renderParticles, boundaryParticles, 0, boundaryParticles.size());
 }
 
 void addWall(const glm::vec3 &minX, const glm::vec3 &maxX, std::vector<glm::vec3> &boundaryParticles)

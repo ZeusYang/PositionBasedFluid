@@ -141,7 +141,7 @@ void main()
 
 		gl_Position = pos[i];
 		Out.position = pos[i].xyz;
-		Out.normal = In[i].normal;
+		Out.normal = In[i].normal; 
 		Out.texCoord = texCoord[i];
 		Out.wsPosition = voxelPos.xyz * volumeDimension;
 

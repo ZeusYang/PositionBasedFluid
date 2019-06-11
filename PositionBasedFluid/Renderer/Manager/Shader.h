@@ -17,6 +17,8 @@ namespace Renderer
 
 		Shader(const std::string &vertexPath, const std::string &fragmentPath);
 
+		Shader(const std::string &vertexPath, const std::string &fragmentPath, const std::string &geometryPath);
+
 		~Shader() { glDeleteProgram(m_id); }
 
 		void bind() { glUseProgram(m_id); }

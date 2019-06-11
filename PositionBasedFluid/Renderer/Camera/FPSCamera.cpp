@@ -75,10 +75,10 @@ namespace Renderer
 		this->rotate(right(), deltaY * m_mouseSty);
 	}
 
-	void FPSCamera::lookAt(glm::vec3 dir)
+	void FPSCamera::lookAt(glm::vec3 dir, glm::vec3 up)
 	{
 		m_dirty = true;
-		m_rotation = glm::quatLookAt(dir, LocalUp);
+		m_rotation = glm::quatLookAt(dir, up);
 	}
 
 	void FPSCamera::translate(const glm::vec3 & dt)

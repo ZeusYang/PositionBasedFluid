@@ -12,7 +12,6 @@ namespace Renderer
 	{
 		m_shaderIndex = shaderIndex;
 		glGenBuffers(1, &m_instanceVBO);
-		std::cout << "m_instanceVBO->" << m_instanceVBO << std::endl;
 	}
 
 	InstanceDrawable::~InstanceDrawable()

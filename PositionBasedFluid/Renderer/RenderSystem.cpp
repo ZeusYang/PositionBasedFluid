@@ -51,7 +51,7 @@ namespace Renderer
 	{
 		// create a first person camera.
 		FPSCamera *_cam = new FPSCamera(pos);
-		_cam->lookAt(glm::normalize(target - pos));
+		_cam->lookAt(glm::normalize(target - pos), Camera3D::LocalUp);
 		m_camera = shared_ptr<Camera3D>(_cam);
 		return m_camera;
 	}
@@ -87,7 +87,7 @@ namespace Renderer
 		}
 		m_lightCamera->setOrthographicProject(left, right, bottom, top, near, far);
 		FPSCamera *cam = reinterpret_cast<FPSCamera*>(m_lightCamera.get());
-		cam->lookAt(-m_sunLight->getDirection());
+		cam->lookAt(-m_sunLight->getDirection(), Camera3D::LocalUp);
 	}
 
 	void RenderSystem::setClearMask(GLbitfield mask)

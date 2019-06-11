@@ -32,6 +32,17 @@ namespace Renderer
 			return m_units.size() - 1;
 		}
 
+		unsigned int loadShader(const std::string &name, const std::string &vPath, const std::string &fPath,
+			const std::string &gPath)
+		{
+			if (m_unitMap.find(name) != m_unitMap.end())
+				return m_unitMap[name];
+			Shader::ptr shader(new Shader(vPath, fPath, gPath));
+			m_units.push_back(shader);
+			m_unitMap[name] = m_units.size() - 1;
+			return m_units.size() - 1;
+		}
+
 		Shader::ptr getShader(const std::string &name)
 		{
 			if (m_unitMap.find(name) == m_unitMap.end())
